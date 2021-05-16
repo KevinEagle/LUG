@@ -63,9 +63,10 @@ void Menu::gausOptions()
 	case 4:
 	{
 		system("CLS");
-		gaus->performOperation();
-		gaus->checkConsistency();
-		gausOptions();
+		gaus->checkConsistency(4, gaus->performOperation(4));
+		gaus->printResult(4, gaus->performOperation(4));
+		
+		//gausOptions();
 
 
 	}
@@ -106,7 +107,7 @@ void Menu::luOptions()
 	case 2:
 	{
 		system("CLS");
-		lu->decomposition();
+		//lu->decomposition();
 		luOptions();
 	}
 	break;

@@ -32,10 +32,10 @@ void Gaus::fillMatrix() //jest
 	cout << "Wpisz wartosci macierzy: " << endl;
 	for (int i = 0; i < numberOfRows; i++)
 	{
-		cout << "Kolumna " << i << endl;
+		cout << "Kolumna [" << i <<"]"<< endl;
 		for (int j = 0; j < numberOfColumns; j++)
 		{
-			cout << "Wiersz" << j;
+			cout << "Wiersz [" << j <<"]: ";
 			cin >> tab[i][j];
 		}
 	}
@@ -44,7 +44,7 @@ void Gaus::fillMatrix() //jest
 void Gaus::printMatrix() //jest
 {
 	for (int i = 0; i < numberOfRows; i++) {
-		for (int j = 0; j <= numberOfColumns; j++)
+		for (int j = 0; j < numberOfColumns; j++)
 			cout << tab[i][j] << " ";
 		cout << endl;
 	}

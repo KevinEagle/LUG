@@ -10,7 +10,7 @@ using namespace std;
 class Lu
 {
 private:
-
+	int n;
 
 public:
 	Lu();

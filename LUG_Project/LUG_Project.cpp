@@ -35,7 +35,6 @@ int main()
 	//// printing solutions(if exist)
 	//gaus->printResult(n, flag);
 
-	//delete gaus;
 	main_menu->menu();
 
 	delete main_menu;
