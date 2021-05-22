@@ -44,20 +44,6 @@ void Lu::decomposition(float a[10][10], float l[10][10], float u[10][10], int n)
 			}
 		}
 	}
-}
-
-void Lu::lu_results() {
-	float a[10][10], l[10][10], u[10][10];
-	int n = 0, i = 0, j = 0;
-
-	cout << "Proszê wpisaæ wielkosc macierzy : " << endl;
-	cin >> n;
-
-	cout << "Proszê wpisaæ wartosci macierzy: " << endl;
-	for (i = 0; i < n; i++)
-		for (j = 0; j < n; j++)
-			cin >> a[i][j];
-	decomposition(a, l, u, n);
 	cout << "Wyglad macierzy po dekompozycji czesci L: " << endl;
 	for (i = 0; i < n; i++) {
 		for (j = 0; j < n; j++) {
@@ -75,4 +61,53 @@ void Lu::lu_results() {
 		cout << endl;
 	}
 	return;
+
 }
+
+//void Lu::lu_results() {
+	//float a[10][10], l[10][10], u[10][10];
+	//int n = 0, i = 0, j = 0;
+
+	///*decomposition(a, l, u, n);
+	//cout << "Wyglad macierzy po dekompozycji czesci L: " << endl;
+	//for (i = 0; i < n; i++) {
+	//	for (j = 0; j < n; j++) {
+	//		cout << l[i][j] << " ";
+	//	}
+	//	cout << endl;
+	//}
+	//cout << "Wyglad macierzy po dekompozycji czesci U: " << endl;
+	//for (i = 0; i < n; i++) {
+
+
+	//	for (j = 0; j < n; j++) {
+	//		cout << u[i][j] << " ";
+	//	}
+	//	cout << endl;
+	//}
+	//return;*/
+//}
+
+
+void Lu::lu_input(int, int, int)
+{
+	float a[10][10], l[10][10], u[10][10];
+	int n = 0, i = 0, j = 0;
+
+	cout << "Prosze wpisac wielkosc macierzy : " << endl;
+	cin >> n;
+
+	cout << "Prosze wpisac wartosci macierzy kolumnami: " << endl;
+	for (i = 0; i < n; i++)
+	{
+		for (j = 0; j < n; j++)
+		{
+			cin >> a[i][j];
+		}
+
+	}
+
+
+	return;
+}
+

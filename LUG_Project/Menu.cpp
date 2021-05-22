@@ -15,12 +15,13 @@ Menu::~Menu()
 	delete lu;
 }
 
+
 void Menu::options()
 {
 	cout << "==== MENU GLOWNE ===" << endl;
 	cout << "Dostepne opcje:" << endl;
 	cout << "1. Metoda Gausa" << endl;
-	cout << "2. Metoda LU" << endl;
+	cout << "2. Dekompozycja LU" << endl;
 	cout << "3. Wyjscie z programu" << endl;
 }
 void Menu::gausOptions()
@@ -65,7 +66,7 @@ void Menu::gausOptions()
 		system("CLS");
 		gaus->checkConsistency(4, gaus->performOperation(4));
 		gaus->printResult(4, gaus->performOperation(4));
-		
+
 		//gausOptions();
 
 
@@ -89,9 +90,10 @@ void Menu::gausOptions()
 }
 void Menu::luOptions()
 {
-	cout << "==== METODA LU ===" << endl;
+	cout << "==== DEKOMPOZYCJA LU ===" << endl;
 	cout << "1. Wpisz wartosci macierzy" << endl;
 	cout << "2.	Wyswietl wyniki" << endl;
+	cout << "3.	Powrot" << endl;
 
 	cin >> operation;
 	switch (operation)
@@ -99,15 +101,14 @@ void Menu::luOptions()
 	case 1:
 	{
 		system("CLS");
-		lu->lu_results();
+		lu->lu_input();
 		luOptions();
-
 	}
 	break;
 	case 2:
 	{
 		system("CLS");
-		//lu->decomposition();
+		lu->lu_results();
 		luOptions();
 	}
 	break;
@@ -120,7 +121,7 @@ void Menu::luOptions()
 	default:
 	{
 		cout << endl << "Brak takiej operacji" << endl;
-		gausOptions();
+		luOptions();
 	}
 	break;
 	}
