@@ -11,13 +11,18 @@ class Lu
 {
 private:
 	int i, j, n;
+	int numberOfRows;
+	int numberOfColumns;
+	float ** tab_lu;
 
 public:
 	Lu();
 	~Lu();
 	void decomposition(float a[10][10], float l[10][10], float u[10][10], int n);
-	void lu_results();
-	void lu_input(int, int, int);
+	void initMatrix();
+	void fillMatrix();
+	void printMatrix();
+	void loadFromFile(string);
 
 };
 

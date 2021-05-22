@@ -1,10 +1,3 @@
-﻿  pch.cpp
-  Gaus.cpp
-  Lu.cpp
-D:\gauss_22\LUG_Project\Lu.cpp(94,19): warning C4101: "l": lokalna zmienna, do której nie istnieje odwołanie
-D:\gauss_22\LUG_Project\Lu.cpp(94,30): warning C4101: "u": lokalna zmienna, do której nie istnieje odwołanie
-  LUG_Project.cpp
-  Menu.cpp
+﻿  Menu.cpp
 D:\gauss_22\LUG_Project\Menu.cpp(104,16): error C2660: "Lu::lu_input": funkcja nie przyjmuje 0 argumentów
 D:\gauss_22\LUG_Project\Lu.h(20,7): message : zobacz deklarację „Lu::lu_input”
-  Generowanie kodu...

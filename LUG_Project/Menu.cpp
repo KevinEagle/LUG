@@ -91,9 +91,11 @@ void Menu::gausOptions()
 void Menu::luOptions()
 {
 	cout << "==== DEKOMPOZYCJA LU ===" << endl;
-	cout << "1. Wpisz wartosci macierzy" << endl;
-	cout << "2.	Wyswietl wyniki" << endl;
-	cout << "3.	Powrot" << endl;
+	cout << "1. Zaladuj z pliku" << endl;
+	cout << "2. Wygeneruj recznie macierz" << endl;
+	cout << "3. Wyswietl macierz" << endl;
+	cout << "4. Wykonaj dekompozycje LU" << endl;
+	cout << "5. Powrot" << endl;
 
 	cin >> operation;
 	switch (operation)
@@ -101,61 +103,48 @@ void Menu::luOptions()
 	case 1:
 	{
 		system("CLS");
-		lu->lu_input();
+		lu->loadFromFile(file);
+
 		luOptions();
+
 	}
 	break;
 	case 2:
 	{
 		system("CLS");
-		lu->lu_results();
+		lu->initMatrix();
+		lu->fillMatrix();
+
+		system("CLS");
 		luOptions();
 	}
 	break;
 	case 3:
 	{
+		lu->printMatrix();
+		luOptions();
+	}
+	break;
+	case 4:
+	{
+		system("CLS");
+
+		//gausOptions();
+
+
+	}
+	break;
+	case 5:
+	{
 		system("CLS");
 		menu();
+
 	}
 	break;
 	default:
 	{
 		cout << endl << "Brak takiej operacji" << endl;
-		luOptions();
-	}
-	break;
-	}
-
-}
-void Menu::menu()
-{
-	options();
-	cin >> operation;
-	switch (operation)
-	{
-	case 1:
-	{
-		system("CLS");
 		gausOptions();
-	}
-	break;
-	case 2:
-	{
-		system("CLS");
-		luOptions();
-	}
-	break;
-	case 3:
-	{
-		exit(0);
-	}
-	break;
-	default:
-	{
-		cout << endl << "Brak takiej operacji" << endl;
-		system("CLS");
-		menu();
-
 	}
 	break;
 	}
