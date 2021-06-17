@@ -10,13 +10,17 @@ using namespace std;
 class Lu
 {
 private:
-	int n;
+	int n; // matrix size
+	float ** tab_lu;
 
 public:
 	Lu();
 	~Lu();
-	void decomposition(float a[10][10], float l[10][10], float u[10][10], int n);
-	void lu_results();
+	void decomposition();
+	void initMatrix();
+	void fillMatrix();
+	void printMatrix();
+	void loadFromFile(string);
 
 };
 

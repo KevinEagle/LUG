@@ -1,5 +1,3 @@
-﻿  LUG_Project.cpp
-  Lu.cpp
-  Menu.cpp
-  Generowanie kodu...
-  LUG_Project.vcxproj -> C:\Users\Kevin\source\repos\LUG_Project\Debug\LUG_Project.exe
+﻿  Menu.cpp
+D:\gauss_22\LUG_Project\Menu.cpp(104,16): error C2660: "Lu::lu_input": funkcja nie przyjmuje 0 argumentów
+D:\gauss_22\LUG_Project\Lu.h(20,7): message : zobacz deklarację „Lu::lu_input”
